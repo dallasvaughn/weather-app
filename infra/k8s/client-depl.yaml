@@ -15,6 +15,17 @@ spec:
       containers:
         - name: client
           image: dallasvaughn/client
+          env:
+            - name: GEOCODE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: geocode-secret
+                  key: GEOCODE_KEY
+            - name: FORECAST_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: forecast-secret
+                  key: FORECAST_KEY
 ---
 apiVersion: v1
 kind: Service

@@ -4,7 +4,7 @@ const geocode = async (location) => {
   const locationQuery = location.replace(/\s+/g, '+'); // replace spaces in user input with '+' for search parameter
 
   const res = await axios.get(
-    `https://maps.googleapis.com/maps/api/geocode/json?address=${locationQuery}&key=${process.env.geocodeKey}`
+    `https://maps.googleapis.com/maps/api/geocode/json?address=${locationQuery}&key=${process.env.GEOCODE_KEY}`
   );
 
   const { lat, lng } = res.data.results[0].geometry.location;
