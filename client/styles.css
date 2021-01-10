@@ -1,0 +1,100 @@
+html,
+body {
+  font-family: 'Montserrat';
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #192841;
+}
+
+.navbar-brand {
+  color: #89cff0;
+  font-family: 'Montserrat';
+  font-weight: bold;
+}
+
+.nav-link {
+  color: white;
+}
+
+.navbar-brand:hover {
+  text-decoration: none;
+  color: #89cff0;
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.jumbotron {
+  margin: 10px;
+}
+
+.signup-button {
+  margin-bottom: 10px;
+}
+
+.home-button {
+  margin: 5px;
+}
+
+.search-form {
+  margin-top: 20px;
+}
+
+.search-result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img-top {
+  width: 80px;
+  margin-bottom: -25px;
+}
+
+.save-message {
+  margin-top: 10px;
+  color: #006400;
+  font-weight: bold;
+}
+
+.saved-title {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.saved-weather-container {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.card {
+  font-family: 'Quicksand';
+  margin: 5px;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  background: #192841;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-text {
+  color: white;
+}

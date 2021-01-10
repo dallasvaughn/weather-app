@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-service
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: 'true'
+spec:
+  rules:
+    - host: weatherapp.dev
+      http:
+        paths:
+          - path: /api/users/?(.*)
+            backend:
+              serviceName: auth-srv
+              servicePort: 3000
+          - path: /api/locations/?(.*)
+            backend:
+              serviceName: locations-srv
+              servicePort: 3000
+          - path: /?(.*) # catch-all path; must come at the end of all available paths
+            backend:
+              serviceName: client-srv
+              servicePort: 3000
